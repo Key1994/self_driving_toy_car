@@ -12,3 +12,6 @@ Hardware structure.
 As shown in Fig 1, the car consists of four modules: perception module, processing module, battery module and execution module.
 The perception module collects environment information through a camera and a untrasonic sensor. The raspberry Pi in processing module processes the collected data and outputs controlling orders to execution module. Then, the four motors could drive the car according to these orders to realize the automation. All of the devices are powered by the battery module.
 ![Hardware architecture](https://github.com/Key1994/self_driving_toy_car/blob/master/Hardware%20architecture.png)
+
+Algorithms.
+1. Lane lines detection.
