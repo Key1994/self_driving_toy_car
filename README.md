@@ -39,7 +39,7 @@ With four installed motors, the car can:
 * Calculate the offset to the center of the lane, and output the expected steering direction.  
 ![Offset calculation](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig7.png)  
 Based on the steps above, the car is able to drive along the lane lines, even the lane with sharp corner.  
-[![watch the video](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig10.png)](https://www.youtube.com/watch?v=r_8ARWHHu6c&feature=youtu.be)  
+[![watch the video](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig11.png)](https://www.youtube.com/watch?v=r_8ARWHHu6c&feature=youtu.be)  
 However, it is difficult for the raspberry Pi to predict the real-time steering direction since the large computation. Just as shown in the above video, the car takes a relatively long time to obtain the controlling order, hence it goes with a low speed and many stucks. On the other hand, it is pretty hard to keep the car driving between the lane lines exactly due to the error of prediction. The results suggest that the accuracy of the steering direction prediction remains at around 80%. All in all, the steering direction prediction technique based on Canny operator is available but not satisfactory.  
 
 ### 2. Steering angle predict based on convolutional neural network.  
