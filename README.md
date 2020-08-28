@@ -3,7 +3,7 @@
 
 Project Objectives:
 =====
-    1.Hardware. Design the structure of the car, and realize it with hands-on practice.  
+    1. Hardware. Design the structure of the car, and realize it with hands-on practice.  
     2. Algorithms. Explore efficient perception algorithms to process the data collected from sensors.  
     3. Software. Write programs to implement the algorithms and output controlling commands.  
     4. Test. Drive the car with these controlling commands.  
@@ -17,9 +17,9 @@ Fig 1. The hardware architecture of the car.
 ![Hardware architecture](https://github.com/Key1994/self_driving_toy_car/blob/master/Hardware%20architecture.png)
 
 With four installed motors, the car can:  
-        Go forward and backward.  
-        Turn left and turn right by the differential of left and right wheels.  
-        Change the spped through pulse width modulation (PWM) control.  
+    1. Go forward and backward.  
+    2. Turn left and turn right by the differential of left and right wheels.  
+    3. Change the spped through pulse width modulation (PWM) control.  
 
 
 Algorithms.
