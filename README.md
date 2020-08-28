@@ -15,9 +15,9 @@ Fig 1. The hardware architecture of the car.
 ![Hardware architecture](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Hardware%20architecture.png)
 
 With four installed motors, the car can:  
-    * Go forward and backward.  
-    * Turn left and turn right by the differential of left and right wheels.  
-    * Change the spped through pulse width modulation (PWM) control.  
+* Go forward and backward.  
+* Turn left and turn right by the differential of left and right wheels.  
+* Change the spped through pulse width modulation (PWM) control.  
 
 
 ## Algorithms.  
