@@ -27,7 +27,9 @@ Algorithms.
 1. Steering angle predict based on Canny operator.  
 _____
 * Image collected by the camera.  
+
 * Edge extraction by Canny operator.  
+!(https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig2.png)
 * Define the region of interest (ROI).  
 * Hough transform to find the lane lines.  
 * Transform the image from perspective to birdview.  
