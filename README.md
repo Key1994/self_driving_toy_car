@@ -1,14 +1,14 @@
 # How to build a self-driving toy car?
 
 
-##Project Objectives:
+## Project Objectives:  
     1. Hardware. Design the structure of the car, and realize it with hands-on practice.  
     2. Algorithms. Explore efficient perception algorithms to process the data collected from sensors.  
     3. Software. Write programs to implement the algorithms and output controlling commands.  
     4. Test. Drive the car with these controlling commands.  
 
 
-##Hardware structure.
+## Hardware structure.  
 As shown in Fig 1, the car consists of four modules: perception module, processing module, battery module and execution module.  
 The perception module collects environment information through a camera and a untrasonic sensor. The raspberry Pi in processing module processes the collected data and outputs controlling orders to execution module. Then, the four motors could drive the car according to these orders to realize the automation. All of the devices are powered by the battery module.  
 Fig 1. The hardware architecture of the car.  
@@ -20,9 +20,9 @@ With four installed motors, the car can:
     3. Change the spped through pulse width modulation (PWM) control.  
 
 
-##Algorithms.
+## Algorithms.  
 
-###1. Steering angle predict based on Canny operator.  
+### 1. Steering angle predict based on Canny operator.  
 
 * Image collected by the camera.  
 ![Edge extraction](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig2.png)
@@ -41,7 +41,7 @@ With four installed motors, the car can:
 Based on the steps above, the car is able to drive along the lane lines, even the lane with sharp corner.  
 However, it is difficult for the raspberry Pi to predict the real-time steering direction since the large computation. Just as shown in the above video, the car takes a relatively long time to obtain the controlling order, hence it goes with a low speed and many stucks. On the other hand, it is pretty hard to keep the car driving between the lane lines exactly due to the error of prediction. The results suggest that the accuracy of the steering direction prediction remains at around 80%. All in all, the steering direction prediction technique based on Canny operator is available but not satisfactory.  
 
-###2. Steering angle predict based on convolutional neural network.
+### 2. Steering angle predict based on convolutional neural network.  
 
 Alternatively, I tried to apply a convolutional neural network to predict the steering angle. Compared to the method based on Canny operator, the CNN loads the images and outputs the predictions directly. Even so, the large computation of convolutional operation is still a challenge for raspberry Pi. Here, I established a simple CNN with the following architecture.  
 To train the CNN, I build a training set with 5000 images collected by the camera, and labelled them manually. The trainging was implemented with TensorFlow. The cross entropy was applied as the loss function to evaluated the training results. With the increase of training epochs, the value of loss function decreases gradually. Then, the trained network was tested on a new dataset with 500 images and the prediction accuracy was recorded.  
