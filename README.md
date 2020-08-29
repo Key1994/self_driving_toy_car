@@ -45,6 +45,7 @@ However, it is difficult for the raspberry Pi to predict the real-time steering 
 ### 2. Steering angle predict based on convolutional neural network.  
 
 Alternatively, I tried to apply a convolutional neural network to predict the steering angle. Compared to the method based on Canny operator, the CNN loads the images and outputs the predictions directly. Even so, the large computation of convolutional operation is still a challenge for raspberry Pi. Here, I established a simple CNN with the following architecture.  
+![CNN structure](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig12.png)  
 To train the CNN, I build a training set with 5000 images collected by the camera, and labelled them manually. The trainging was implemented with TensorFlow. The cross entropy was applied as the loss function to evaluated the training results. With the increase of training epochs, the value of loss function decreases gradually. Then, the trained network was tested on a new dataset with 500 images and the prediction accuracy was recorded.  
 ![Offset calculation](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig8.png)  
 
