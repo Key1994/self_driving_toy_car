@@ -50,3 +50,8 @@ To train the CNN, I build a training set with 5000 images collected by the camer
 ![Offset calculation](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig8.png)  
 
 Obviously, the CNN trained with 30 epoches gets a sastifactory accuracy. Next, I rewrote the program on the raspberry Pi and load the trained model to drive the car. I expected that the test goes well since the high accuracy the CNN have got on the test dataset. Unfortunately, the car always went off the lane lines and I am trying to find the reasons to solve this problem.   
+
+
+### 3. Collision avoidance through ultrasonic sensor.
+If the car cannot detect the lane lines correctly, it may be out of control and collids with other vehicles and wall. It is important to set a second scheme to avoid the collision in extreme cases. Here, the ultrasonic sensor is installed at the forefront of the car to detect the distance of obstacles from the car. The sensor emits and receives ultrasonic signals continuesly and outputs the distance by calculating the product of sonic speed and time interval between emission and reception. When the distance is less than the minimal threshold, the car stops to avoid collision.  
+![Ultrasonic sensor](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig13.png) 
