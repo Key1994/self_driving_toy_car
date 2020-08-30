@@ -22,7 +22,7 @@ With four installed motors, the car can:
 
 ## Algorithms.  
 
-### 1. Steering angle predict based on Canny operator.  
+### 1. Steering angle prediction based on Canny operator.  
 
 * Image collected by the camera.  
 ![Edge extraction](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig2.png)
@@ -42,7 +42,7 @@ Based on the steps above, the car is able to drive along the lane lines, even th
 [![watch the video](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig11.png)](https://www.youtube.com/watch?v=r_8ARWHHu6c&feature=youtu.be)  
 However, it is difficult for the raspberry Pi to predict the real-time steering direction since the large computation. Just as shown in the above video, the car takes a relatively long time to obtain the controlling order, hence it goes with a low speed and many stucks. On the other hand, it is pretty hard to keep the car driving between the lane lines exactly due to the error of prediction. The results suggest that the accuracy of the steering direction prediction remains at around 80%. All in all, the steering direction prediction technique based on Canny operator is available but not satisfactory.  
 
-### 2. Steering angle predict based on convolutional neural network.  
+### 2. Steering angle predicting based on convolutional neural network.  
 
 Alternatively, I tried to apply a convolutional neural network to predict the steering angle. Compared to the method based on Canny operator, the CNN loads the images and outputs the predictions directly. Even so, the large computation of convolutional operation is still a challenge for raspberry Pi. Here, I established a simple CNN with the following architecture.  
 ![CNN structure](https://github.com/Key1994/self_driving_toy_car/blob/master/Graphs/Fig12.png)  
